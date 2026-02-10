@@ -124,7 +124,7 @@ def Calculate_Tau0vsg():
                     Delta0 = r.root
                 Delta0 = torch.tensor(Delta0, device=device)
                 Gamma0 = g**2 * (phi(torch.sqrt(torch.abs(Delta0)) * z)**2).mean() - Delta0
-                if Gamma0 < -0.000045:
+                if Gamma0 < 0.000:
                     continue
                 else:
                     Deltas.append(Delta0.item())
